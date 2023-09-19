@@ -1,7 +1,12 @@
 {
+  "files": [
+    "index.ts"
+  ],
   "compilerOptions": {
     "module": "NodeNext",
     "esModuleInterop": true,
     "moduleResolution": "NodeNext",
+    "types": ["vite/client"],
+    "outDir": "api"
   }
 }

@@ -1,7 +1,7 @@
 import got from 'got';
 
 const proxy = (req, res, next) => {
-  const url = req.query.request;
+  const url = req.query.url;
 
   res.setHeader('Content-Type', 'text/html');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -19,7 +19,7 @@ const proxy = (req, res, next) => {
   }).text().then(data => {
     res.send(data.slice(0, 100));
   }).catch(error => {
-    res.send('some thing went wrong!');
+    res.send(`some thing went wrong! Try another url. Error ${error.code} ${error.message}`);
   }).finally(() => {
     next();
   });
