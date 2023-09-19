@@ -1,0 +1,24 @@
+{
+  "name": "@heroitvn/cors-proxy",
+  "version": "1.0.0",
+  "description": "CORS everywhere",
+  "source": "index.ts",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node --esm index.ts",
+    "build": "parcel build"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/got": "^9.6.12",
+    "express": "^4.18.2",
+    "got": "^13.0.0",
+    "node-fetch": "^3.3.2",
+    "parcel": "^2.9.3",
+    "ts-node": "^10.9.1"
+  }
+}
