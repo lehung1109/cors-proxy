@@ -1,1 +1,3 @@
-export { default } from "./module/server/index.js";
+import app from "./module/server/index.js";
+
+module.exports = app;
