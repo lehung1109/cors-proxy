@@ -2,12 +2,11 @@
   "name": "@heroitvn/cors-proxy",
   "version": "1.0.0",
   "description": "CORS everywhere",
-  "source": "index.ts",
   "main": "api/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node --esm index.ts",
-    "build": "parcel build"
+    "build": "parcel build module/server/index.ts"
   },
   "type": "module",
   "author": "",
