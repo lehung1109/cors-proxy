@@ -1,6 +1,11 @@
 import got from 'got';
 
 const proxy = (req, res, next) => {
+  if(req.path !== '/api') {
+    next();
+    return;
+  }
+
   const url = req.query.url;
 
   res.setHeader('Content-Type', 'text/html');
@@ -17,7 +22,7 @@ const proxy = (req, res, next) => {
       response: 1000
     }
   }).text().then(data => {
-    res.send(data.slice(0, 100));
+    res.send(data);
   }).catch(error => {
     res.send(`some thing went wrong! Try another url. Error ${error.code} ${error.message}`);
   }).finally(() => {
