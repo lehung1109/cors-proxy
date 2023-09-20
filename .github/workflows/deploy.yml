@@ -1,0 +1,30 @@
+name: Deploy
+run-name: Deploy code to release branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v4
+      - name: NPM install
+        run: npm ci
+      - name: checkout to release branch
+        run: git checkout release
+      - name: build code
+        run: npm run build
+      - name: force files
+        run: git add -f api
+      - name: create pr
+        run: |
+          git commit -am "build code"
+          git push -f origin release
+          gh pr create --base develop --head release --title "Build and deploy code" 
+          gh pr merge develop
+
+      
