@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node --esm listen.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "vercel-build": ""
   },
   "type": "module",
   "author": "",
