@@ -20,8 +20,8 @@ jobs:
         run: npm ci
       - name: show all branches
         run: git branch -a
-      - name: checkout to release branch
-        run: git checkout release
+      - name: checkout to develop branch
+        run: git checkout develop
       - name: build code
         run: npm run build
       - name: force files
@@ -31,8 +31,6 @@ jobs:
           git config --global user.email "hun0895@gmail.com"
           git config --global user.name "Hung Le"
           git commit -am "build code"
-          git push -f origin release
-          gh pr create --base develop --head release --title "Build and deploy code" 
-          gh pr merge develop
+          git push -f origin develop
 
       
