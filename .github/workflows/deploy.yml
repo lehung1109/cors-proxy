@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --global user.email "hun0895@gmail.com"
           git config --global user.name "Hung Le"
-          git commit -am "build code"
+          git commit -am "automation build code"
           git push -f origin develop
 
       
