@@ -26,6 +26,8 @@ jobs:
         run: git add -f api
       - name: create pr
         run: |
+          git config --global user.email "hun0895@gmail.com"
+          git config --global user.name "Hung Le"
           git commit -am "build code"
           git push -f origin release
           gh pr create --base develop --head release --title "Build and deploy code" 
