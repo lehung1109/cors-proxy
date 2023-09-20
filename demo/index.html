@@ -8,7 +8,7 @@
 <body>
   
   <script>
-    fetch('https://cors-proxy-wine.vercel.app/api?url=https://www.google.com/').then((data) => {
+    fetch('https://cors-proxy-wine.vercel.app/api?url=https://www.google.com/').then(res => res.text()).then((data) => {
       document.body.innerHTML = data;
     });
   </script>
