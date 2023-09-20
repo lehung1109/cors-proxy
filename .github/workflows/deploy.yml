@@ -26,7 +26,7 @@ jobs:
         run: npm run build
       - name: force files
         run: git add -f api
-      - name: create pr
+      - name: push code
         run: |
           git config --global user.email "hun0895@gmail.com"
           git config --global user.name "Hung Le"
