@@ -14,6 +14,8 @@ jobs:
         uses: actions/setup-node@v3
       - name: NPM install
         run: npm ci
+      - name: show all branches
+        run: git branch -a
       - name: checkout to release branch
         run: git checkout release
       - name: build code
