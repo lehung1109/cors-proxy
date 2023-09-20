@@ -2,6 +2,10 @@
 
 Normally, you can't get source code if the site restrict CORS. The package help you pass it.
 
+## Demo
+
+https://lehung1109.github.io/cors-proxy/demo/
+
 ## Documentation
 
 You must call from a context HTTPS.
